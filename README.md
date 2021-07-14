@@ -46,6 +46,7 @@ The script was tested for those options with GRRM17:
 
 **********
 August 2019: First version was developed.
+
 July 2021: Release as free open-source.
 
 by H.S.
