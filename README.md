@@ -23,10 +23,15 @@ See the GRRM manual for more details to use external codes.
 (2) After all the "OPTIONS" specifications, add an empty line and write the following information for CP2K run:
 
  &cp2k_template : template for CP2K input. e.g., cp2k.tmp
+ 
  &cp2k_exe : CP2K execution type. e.g., cp2k.popt
+ 
  &cp2k_runtype : CP2K runtype. e.g., mpirun
+ 
  &cp2k_np : number of processers. e.g., 8
+ 
  &cp2k_basis : Basis set to use. e.g., EMSL_BASIS_SETS
+ 
  &cp2k_potential Potential type: e.g., POTENTIAL
 
 
@@ -47,12 +52,11 @@ Notes
 
 The script was tested for those options with GRRM17:
 
-  min
-  addf
+	min
+	addf
 
 **********
- August 2019: First version was developed.
-
- July 2021: Release as free open-source.
+	August 2019: First version was developed.
+	July 2021: Release as free open-source.
 
 by H.S.
