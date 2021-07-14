@@ -2,7 +2,7 @@
 
 #
 # This is a Python script to use CP2K instead of Gaussian (default) from GRRM. 
-# It is free and open-source software licensed under the GNU-GPL. 
+# It is free and open-source software licensed under the MIT-lisence. 
 # We assume no responsibility or liability whatsoever arising from actual use.
 #
 # To use CP2K from GRRM, write in GRRM input file: 
