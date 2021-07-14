@@ -20,8 +20,8 @@
 # &cp2k_basis : Basis set to use. e.g., EMSL_BASIS_SETS
 # &cp2k_potential Potential type: e.g., POTENTIAL 
 #
-# A template for CP2K input files is additionally needed to prepare
-# and the file name (e.g., cp2k.tmp) has to be specified in the GRRM input file.
+# A template for CP2K input files is necessary.
+# The file name (e.g., cp2k.tmp) has to be specified in the GRRM input file.
 # Geometry data of the template is replaced with that from GRRM-output.
 # One may need to edit this script to adjust your environment for CP2K run.
 #
