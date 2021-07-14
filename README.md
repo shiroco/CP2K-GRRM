@@ -16,9 +16,11 @@ How to use
 1. Set up GRRM input file
 
 (1) header
+
 	%link=non-supported
 
 (2) OPTIONS
+
 	sublink = cp2k_grrm_interface.py
 
 See the GRRM manual for more details to use external codes.
@@ -54,6 +56,7 @@ The script was tested for those options with GRRM17:
 	addf
 
 **********
+
 	August 2019: First version was developed.
 	July 2021: Release as free open-source.
 
