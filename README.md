@@ -37,7 +37,7 @@ See the GRRM manual for more details to use external codes.
 
 2. Prepare template for CP2K input
 
-A template for CP2K input files is additionally needed to prepare and the file name (e.g., cp2k.tmp) has to be specified in the GRRM input file.
+A template for CP2K input files is necessary. The file name (e.g., cp2k.tmp) has to be specified in the GRRM input file (see above).
 Geometry data of the template is replaced with that from GRRM-output.
 
 
