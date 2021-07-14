@@ -1,0 +1,1625 @@
+
+  **** **** ******  **  PROGRAM STARTED AT               2021-07-14 15:22:00.226
+ ***** ** ***  *** **   PROGRAM STARTED ON                                tcpc23
+ **    ****   ******    PROGRAM STARTED BY                                hsatoh
+ ***** **    ** ** **   PROGRAM PROCESS ID                                  4808
+  **** **  *******  **  PROGRAM STARTED IN   /data/hsatoh/grrm17_cp2k/H2O-min-re
+
+ CP2K| version string:                    CP2K version 9.0 (Development Version)
+ CP2K| source code revision number:                                  git:55d3731
+ CP2K| cp2kflags: omp libint fftw3 libxc elpa parallel mpi3 scalapack cosma xsmm
+ CP2K|             spglib sirius libvori libbqb
+ CP2K| is freely available from                            https://www.cp2k.org/
+ CP2K| Program compiled at                         Die Jul 13 21:12:25 CEST 2021
+ CP2K| Program compiled on                                                tcpc23
+ CP2K| Program compiled for                                                local
+ CP2K| Data directory path                                /data/hutter/cp2k/data
+ CP2K| Input file name                                     grrm_H2O_cp2k-r-2.inp
+
+ GLOBAL| Force Environment number                                              1
+ GLOBAL| Basis set file name                                     EMSL_BASIS_SETS
+ GLOBAL| Potential file name                                           POTENTIAL
+ GLOBAL| MM Potential file name                                     MM_POTENTIAL
+ GLOBAL| Coordinate file name                                      __STD_INPUT__
+ GLOBAL| Method name                                                        CP2K
+ GLOBAL| Project name                                          grrm_H2O_cp2k-r-2
+ GLOBAL| Run type                                           VIBRATIONAL_ANALYSIS
+ GLOBAL| FFT library                                                       FFTW3
+ GLOBAL| Diagonalization library                                            ELPA
+ GLOBAL| Minimum number of eigenvectors for ELPA usage                        16
+ GLOBAL| Orthonormality check for eigenvectors                          DISABLED
+ GLOBAL| Matrix multiplication library                                     COSMA
+ GLOBAL| All-to-all communication in single precision                          F
+ GLOBAL| FFTs using library dependent lengths                                  F
+ GLOBAL| Grid backend                                                       AUTO
+ GLOBAL| Global print level                                               MEDIUM
+ GLOBAL| MPI I/O enabled                                                       T
+ GLOBAL| Total number of message passing processes                             1
+ GLOBAL| Number of threads for this process                                    1
+ GLOBAL| This output is from process                                           0
+ GLOBAL| CPU model name                Intel(R) Xeon(R) CPU E5-2650 v4 @ 2.20GHz
+ GLOBAL| CPUID                                                              1002
+
+ MEMORY| system memory details [Kb]
+ MEMORY|                        rank 0           min           max       average
+ MEMORY| MemTotal            131915472     131915472     131915472     131915472
+ MEMORY| MemFree              80845420      80845420      80845420      80845420
+ MEMORY| Buffers                587888        587888        587888        587888
+ MEMORY| Cached               44568124      44568124      44568124      44568124
+ MEMORY| Slab                  3523256       3523256       3523256       3523256
+ MEMORY| SReclaimable          3112064       3112064       3112064       3112064
+ MEMORY| MemLikelyFree       129113496     129113496     129113496     129113496
+
+
+ *** Fundamental physical constants (SI units) ***
+
+ *** Literature: B. J. Mohr and B. N. Taylor,
+ ***             CODATA recommended values of the fundamental physical
+ ***             constants: 2006, Web Version 5.1
+ ***             http://physics.nist.gov/constants
+
+ Speed of light in vacuum [m/s]                             2.99792458000000E+08
+ Magnetic constant or permeability of vacuum [N/A**2]       1.25663706143592E-06
+ Electric constant or permittivity of vacuum [F/m]          8.85418781762039E-12
+ Planck constant (h) [J*s]                                  6.62606896000000E-34
+ Planck constant (h-bar) [J*s]                              1.05457162825177E-34
+ Elementary charge [C]                                      1.60217648700000E-19
+ Electron mass [kg]                                         9.10938215000000E-31
+ Electron g factor [ ]                                     -2.00231930436220E+00
+ Proton mass [kg]                                           1.67262163700000E-27
+ Fine-structure constant                                    7.29735253760000E-03
+ Rydberg constant [1/m]                                     1.09737315685270E+07
+ Avogadro constant [1/mol]                                  6.02214179000000E+23
+ Boltzmann constant [J/K]                                   1.38065040000000E-23
+ Atomic mass unit [kg]                                      1.66053878200000E-27
+ Bohr radius [m]                                            5.29177208590000E-11
+
+ *** Conversion factors ***
+
+ [u] -> [a.u.]                                              1.82288848426455E+03
+ [Angstrom] -> [Bohr] = [a.u.]                              1.88972613288564E+00
+ [a.u.] = [Bohr] -> [Angstrom]                              5.29177208590000E-01
+ [a.u.] -> [s]                                              2.41888432650478E-17
+ [a.u.] -> [fs]                                             2.41888432650478E-02
+ [a.u.] -> [J]                                              4.35974393937059E-18
+ [a.u.] -> [N]                                              8.23872205491840E-08
+ [a.u.] -> [K]                                              3.15774647902944E+05
+ [a.u.] -> [kJ/mol]                                         2.62549961709828E+03
+ [a.u.] -> [kcal/mol]                                       6.27509468713739E+02
+ [a.u.] -> [Pa]                                             2.94210107994716E+13
+ [a.u.] -> [bar]                                            2.94210107994716E+08
+ [a.u.] -> [atm]                                            2.90362800883016E+08
+ [a.u.] -> [eV]                                             2.72113838565563E+01
+ [a.u.] -> [Hz]                                             6.57968392072181E+15
+ [a.u.] -> [1/cm] (wave numbers)                            2.19474631370540E+05
+ [a.u./Bohr**2] -> [1/cm]                                   5.14048714338585E+03
+ 
+
+ CELL_TOP| Volume [angstrom^3]:                                      1000.000000
+ CELL_TOP| Vector a [angstrom    10.000     0.000     0.000   |a| =    10.000000
+ CELL_TOP| Vector b [angstrom     0.000    10.000     0.000   |b| =    10.000000
+ CELL_TOP| Vector c [angstrom     0.000     0.000    10.000   |c| =    10.000000
+ CELL_TOP| Angle (b,c), alpha [degree]:                                90.000000
+ CELL_TOP| Angle (a,c), beta  [degree]:                                90.000000
+ CELL_TOP| Angle (a,b), gamma [degree]:                                90.000000
+ CELL_TOP| Numerically orthorhombic:                                         YES
+
+ GENERATE|  Preliminary Number of Bonds generated:                             0
+ GENERATE|  Achieved consistency in connectivity generation.
+
+ CELL| Volume [angstrom^3]:                                          1000.000000
+ CELL| Vector a [angstrom]:      10.000     0.000     0.000   |a| =    10.000000
+ CELL| Vector b [angstrom]:       0.000    10.000     0.000   |b| =    10.000000
+ CELL| Vector c [angstrom]:       0.000     0.000    10.000   |c| =    10.000000
+ CELL| Angle (b,c), alpha [degree]:                                    90.000000
+ CELL| Angle (a,c), beta  [degree]:                                    90.000000
+ CELL| Angle (a,b), gamma [degree]:                                    90.000000
+ CELL| Numerically orthorhombic:                                             YES
+
+ CELL_REF| Volume [angstrom^3]:                                      1000.000000
+ CELL_REF| Vector a [angstrom    10.000     0.000     0.000   |a| =    10.000000
+ CELL_REF| Vector b [angstrom     0.000    10.000     0.000   |b| =    10.000000
+ CELL_REF| Vector c [angstrom     0.000     0.000    10.000   |c| =    10.000000
+ CELL_REF| Angle (b,c), alpha [degree]:                                90.000000
+ CELL_REF| Angle (a,c), beta  [degree]:                                90.000000
+ CELL_REF| Angle (a,b), gamma [degree]:                                90.000000
+ CELL_REF| Numerically orthorhombic:                                         YES
+
+ *******************************************************************************
+ *******************************************************************************
+ **                                                                           **
+ **     #####                         ##              ##                      **
+ **    ##   ##            ##          ##              ##                      **
+ **   ##     ##                       ##            ######                    **
+ **   ##     ##  ##   ##  ##   #####  ##  ##   ####   ##    #####    #####    **
+ **   ##     ##  ##   ##  ##  ##      ## ##   ##      ##   ##   ##  ##   ##   **
+ **   ##  ## ##  ##   ##  ##  ##      ####     ###    ##   ######   ######    **
+ **    ##  ###   ##   ##  ##  ##      ## ##      ##   ##   ##       ##        **
+ **     #######   #####   ##   #####  ##  ##  ####    ##    #####   ##        **
+ **           ##                                                    ##        **
+ **                                                                           **
+ **                                                ... make the atoms dance   **
+ **                                                                           **
+ **            Copyright (C) by CP2K developers group (2000-2021)             **
+ **                      J. Chem. Phys. 152, 194103 (2020)                    **
+ **                                                                           **
+ *******************************************************************************
+
+ DFT| Spin restricted Kohn-Sham (RKS) calculation                            RKS
+ DFT| Multiplicity                                                             1
+ DFT| Number of spin states                                                    1
+ DFT| Charge                                                                   0
+ DFT| Self-interaction correction (SIC)                                       NO
+ DFT| Cutoffs: density                                              1.000000E-10
+ DFT|          gradient                                             1.000000E-10
+ DFT|          tau                                                  1.000000E-10
+ DFT|          cutoff_smoothing_range                               0.000000E+00
+ DFT| XC density smoothing                                                  NONE
+ DFT| XC derivatives                                                          PW
+ FUNCTIONAL| ROUTINE=NEW
+ FUNCTIONAL| LIBXC Vers. 5.1.4 (Marques, Oliveira, Burnus, CPC 183, 2272 (2012))
+ FUNCTIONAL| B3LYP (exchange-correlation):
+ FUNCTIONAL| [1] P. J. Stephens, F. J. Devlin, C. F. Chabalowski, and M. J. Fris
+ FUNCTIONAL| ch, J. Phys. Chem. 98, 11623 (1994), doi: 10.1021/j100096a001      
+ FUNCTIONAL| Optional external parameters:                                      
+ FUNCTIONAL|  * Fraction of exact exchange                                      
+ FUNCTIONAL|  * Fraction of GGA exchange correction                             
+ FUNCTIONAL|  * Fraction of GGA correlation correction                          
+ FUNCTIONAL| {scale=1.000, spin-unpolarized}                                    
+
+ QS| Method:                                                                GAPW
+ QS| Density plane wave grid type                        NON-SPHERICAL FULLSPACE
+ QS| Number of grid levels:                                                    4
+ QS| Density cutoff [a.u.]:                                                200.0
+ QS| Multi grid cutoff [a.u.]: 1) grid level                               200.0
+ QS|                           2) grid level                                66.7
+ QS|                           3) grid level                                22.2
+ QS|                           4) grid level                                 7.4
+ QS| Grid level progression factor:                                          3.0
+ QS| Relative density cutoff [a.u.]:                                        35.0
+ QS| Interaction thresholds: eps_pgf_orb:                                1.0E-05
+ QS|                         eps_filter_matrix:                          0.0E+00
+ QS|                         eps_core_charge:                            1.0E-12
+ QS|                         eps_rho_gspace:                             1.0E-10
+ QS|                         eps_rho_rspace:                             1.0E-10
+ QS|                         eps_gvg_rspace:                             1.0E-05
+ QS|                         eps_ppl:                                    1.0E-02
+ QS|                         eps_ppnl:                                   1.0E-07
+ QS| GAPW|                   eps_fit:                                    1.0E-04
+ QS| GAPW|                   eps_iso:                                    1.0E-12
+ QS| GAPW|                   eps_svd:                                    1.0E-08
+ QS| GAPW|                   eps_cpc:                                    1.0E-10
+ QS| GAPW|   atom-r-grid: quadrature:                                     GC_LOG
+ QS| GAPW|      atom-s-grid:  max l :                                          4
+ QS| GAPW|      max_l_rho0 :                                                   2
+
+
+ ATOMIC KIND INFORMATION
+
+  1. Atomic kind: O                                     Number of atoms:       1
+
+     Orbital Basis Set                                                    6-31Gx
+
+       Number of orbital shell sets:                                           4
+       Number of orbital shells:                                               6
+       Number of primitive Cartesian functions:                               11
+       Number of Cartesian basis functions:                                   15
+       Number of spherical basis functions:                                   14
+       Norm type:                                                              2
+
+       Normalised Cartesian orbitals:
+
+                        Set   Shell   Orbital            Exponent    Coefficient
+
+                          1       1    1s             5484.671700       0.831735
+                                                       825.234950       1.530807
+                                                       188.046960       2.477149
+                                                        52.964500       3.256280
+                                                        16.897570       2.792894
+                                                         5.799635       0.954938
+
+                          2       1    1s               15.539616      -0.617934
+                                                         3.599934      -0.275721
+                                                         1.013762       0.814208
+
+                          2       2    2px              15.539616       3.116946
+                                                         3.599934       2.401437
+                                                         1.013762       1.054361
+                          2       2    2py              15.539616       3.116946
+                                                         3.599934       2.401437
+                                                         1.013762       1.054361
+                          2       2    2pz              15.539616       3.116946
+                                                         3.599934       2.401437
+                                                         1.013762       1.054361
+
+                          3       1    1s                0.270006       0.266956
+
+                          3       2    2px               0.270006       0.277432
+                          3       2    2py               0.270006       0.277432
+                          3       2    2pz               0.270006       0.277432
+
+                          4       1    1dx2              0.800000       1.113825
+                          4       1    1dxy              0.800000       1.929201
+                          4       1    1dxz              0.800000       1.929201
+                          4       1    1dy2              0.800000       1.113825
+                          4       1    1dyz              0.800000       1.929201
+                          4       1    1dz2              0.800000       1.113825
+
+       Atomic covalent radius [Angstrom]:                                  0.730
+
+       Atomic van der Waals radius [Angstrom]:                             1.520
+
+     The atoms of this atomic kind are PAW atoms (GAPW):
+       Hard Gaussian function radius:                                      1.512
+       Rho0 radius:                                                        1.512
+       Maximum GTO radius used for PAW projector construction:            24.566
+
+     GAPW Soft Basis Set                                             6-31Gx_soft
+
+       Number of orbital shell sets:                                           4
+       Number of orbital shells:                                               6
+       Number of primitive Cartesian functions:                                4
+       Number of Cartesian basis functions:                                   15
+       Number of spherical basis functions:                                   14
+       Norm type:                                                              2
+
+       Normalised Cartesian orbitals:
+
+                        Set   Shell   Orbital            Exponent    Coefficient
+
+                          1       1    1s         
+
+                          2       1    1s                3.599934      -0.275721
+                                                         1.013762       0.814208
+
+                          2       2    2px               3.599934       2.401437
+                                                         1.013762       1.054361
+                          2       2    2py               3.599934       2.401437
+                                                         1.013762       1.054361
+                          2       2    2pz               3.599934       2.401437
+                                                         1.013762       1.054361
+
+                          3       1    1s                0.270006       0.266956
+
+                          3       2    2px               0.270006       0.277432
+                          3       2    2py               0.270006       0.277432
+                          3       2    2pz               0.270006       0.277432
+
+                          4       1    1dx2              0.800000       1.113825
+                          4       1    1dxy              0.800000       1.929201
+                          4       1    1dxz              0.800000       1.929201
+                          4       1    1dy2              0.800000       1.113825
+                          4       1    1dyz              0.800000       1.929201
+                          4       1    1dz2              0.800000       1.113825
+
+     AE Potential information for                                            ALL
+
+       Description:                                       All-electron potential
+                                          Krack, Parrinello, PCCP 2, 2105 (2000)
+
+       Gaussian exponent of the core charge distribution:               8.154466
+       Electronic configuration (s p d ...):                           4   4   0
+
+  2. Atomic kind: H                                     Number of atoms:       2
+
+     Orbital Basis Set                                                    6-31Gx
+
+       Number of orbital shell sets:                                           2
+       Number of orbital shells:                                               2
+       Number of primitive Cartesian functions:                                4
+       Number of Cartesian basis functions:                                    2
+       Number of spherical basis functions:                                    2
+       Norm type:                                                              2
+
+       Normalised Cartesian orbitals:
+
+                        Set   Shell   Orbital            Exponent    Coefficient
+
+                          1       1    1s               18.731137       0.214935
+                                                         2.825394       0.364571
+                                                         0.640122       0.415051
+
+                          2       1    1s                0.161278       0.181381
+
+       Atomic covalent radius [Angstrom]:                                  0.320
+
+       Atomic van der Waals radius [Angstrom]:                             1.090
+
+     The atoms of this atomic kind are PAW atoms (GAPW):
+       Hard Gaussian function radius:                                      1.200
+       Rho0 radius:                                                        1.200
+       Maximum GTO radius used for PAW projector construction:            24.566
+
+     GAPW Soft Basis Set                                             6-31Gx_soft
+
+       Number of orbital shell sets:                                           2
+       Number of orbital shells:                                               2
+       Number of primitive Cartesian functions:                                3
+       Number of Cartesian basis functions:                                    2
+       Number of spherical basis functions:                                    2
+       Norm type:                                                              2
+
+       Normalised Cartesian orbitals:
+
+                        Set   Shell   Orbital            Exponent    Coefficient
+
+                          1       1    1s                2.825394       0.364571
+                                                         0.640122       0.415051
+
+                          2       1    1s                0.161278       0.181381
+
+     AE Potential information for                                            ALL
+
+       Description:                                       All-electron potential
+                                          Krack, Parrinello, PCCP 2, 2105 (2000)
+
+       Gaussian exponent of the core charge distribution:              12.500000
+       Electronic configuration (s p d ...):                           1   0   0
+
+
+ MOLECULE KIND INFORMATION
+
+
+ All atoms are their own molecule, skipping detailed information
+
+
+ TOTAL NUMBERS AND MAXIMUM NUMBERS
+
+  Total number of            - Atomic kinds:                                   2
+                             - Atoms:                                          3
+                             - Shell sets:                                     8
+                             - Shells:                                        10
+                             - Primitive Cartesian functions:                 19
+                             - Cartesian basis functions:                     19
+                             - Spherical basis functions:                     18
+
+  Maximum angular momentum of the orbital basis functions:                     2
+
+
+ MODULE QUICKSTEP:  ATOMIC COORDINATES IN angstrom
+
+ Atom  Kind  Element       X           Y           Z          Z(eff)       Mass
+    1   1 O    8       0.000000    0.000000    0.113399       8.0000     15.9994
+    2   2 H    1       0.000000    0.759328   -0.453596       1.0000      1.0079
+    3   2 H    1       0.000000   -0.759328   -0.453596       1.0000      1.0079
+
+
+
+
+ SCF PARAMETERS         Density guess:                                    ATOMIC
+                        --------------------------------------------------------
+                        max_scf:                                              10
+                        max_scf_history:                                       0
+                        max_diis:                                              4
+                        --------------------------------------------------------
+                        eps_scf:                                        1.00E-07
+                        eps_scf_history:                                0.00E+00
+                        eps_diis:                                       1.00E-01
+                        eps_eigval:                                     1.00E-05
+                        --------------------------------------------------------
+                        level_shift [a.u.]:                                 0.00
+                        --------------------------------------------------------
+                        Outer loop SCF in use 
+                        No variables optimised in outer loop
+                        eps_scf                                         1.00E-07
+                        max_scf                                               10
+                        No outer loop optimization
+                        step_size                                       5.00E-01
+
+ PW_GRID| Information for grid number                                          6
+ PW_GRID| Cutoff [a.u.]                                                    400.0
+ PW_GRID| spherical cutoff:                                                   NO
+ PW_GRID|   Bounds   1            -90      89                Points:         180
+ PW_GRID|   Bounds   2            -90      89                Points:         180
+ PW_GRID|   Bounds   3            -90      89                Points:         180
+ PW_GRID| Volume element (a.u.^3)  0.1157E-02     Volume (a.u.^3)      6748.3346
+ PW_GRID| Grid span                                                    FULLSPACE
+
+ PW_GRID| Information for grid number                                          7
+ PW_GRID| Number of the reference grid                                         6
+ PW_GRID| Cutoff [a.u.]                                                    200.0
+ PW_GRID| spherical cutoff:                                                   NO
+ PW_GRID|   Bounds   1            -62      62                Points:         125
+ PW_GRID|   Bounds   2            -62      62                Points:         125
+ PW_GRID|   Bounds   3            -62      62                Points:         125
+ PW_GRID| Volume element (a.u.^3)  0.3455E-02     Volume (a.u.^3)      6748.3346
+ PW_GRID| Grid span                                                    FULLSPACE
+
+ PW_GRID| Information for grid number                                          8
+ PW_GRID| Number of the reference grid                                         7
+ PW_GRID| Cutoff [a.u.]                                                     66.7
+ PW_GRID| spherical cutoff:                                                   NO
+ PW_GRID|   Bounds   1            -36      35                Points:          72
+ PW_GRID|   Bounds   2            -36      35                Points:          72
+ PW_GRID|   Bounds   3            -36      35                Points:          72
+ PW_GRID| Volume element (a.u.^3)  0.1808E-01     Volume (a.u.^3)      6748.3346
+ PW_GRID| Grid span                                                    FULLSPACE
+
+ PW_GRID| Information for grid number                                          9
+ PW_GRID| Number of the reference grid                                         7
+ PW_GRID| Cutoff [a.u.]                                                     22.2
+ PW_GRID| spherical cutoff:                                                   NO
+ PW_GRID|   Bounds   1            -22      22                Points:          45
+ PW_GRID|   Bounds   2            -22      22                Points:          45
+ PW_GRID|   Bounds   3            -22      22                Points:          45
+ PW_GRID| Volume element (a.u.^3)  0.7406E-01     Volume (a.u.^3)      6748.3346
+ PW_GRID| Grid span                                                    FULLSPACE
+
+ PW_GRID| Information for grid number                                         10
+ PW_GRID| Number of the reference grid                                         7
+ PW_GRID| Cutoff [a.u.]                                                      7.4
+ PW_GRID| spherical cutoff:                                                   NO
+ PW_GRID|   Bounds   1            -12      11                Points:          24
+ PW_GRID|   Bounds   2            -12      11                Points:          24
+ PW_GRID|   Bounds   3            -12      11                Points:          24
+ PW_GRID| Volume element (a.u.^3)  0.4882         Volume (a.u.^3)      6748.3346
+ PW_GRID| Grid span                                                    FULLSPACE
+
+ POISSON| Solver                                          Martyna-Tuckerman (MT)
+ POISSON| MT| Alpha                                                        7.000
+ POISSON| MT| Relative cutoff                                                2.0
+ POISSON| Periodicity                                                       NONE
+
+ RS_GRID| Information for grid number                                          7
+ RS_GRID|   Bounds   1            -62      62                Points:         125
+ RS_GRID|   Bounds   2            -62      62                Points:         125
+ RS_GRID|   Bounds   3            -62      62                Points:         125
+
+ RS_GRID| Information for grid number                                          8
+ RS_GRID|   Bounds   1            -36      35                Points:          72
+ RS_GRID|   Bounds   2            -36      35                Points:          72
+ RS_GRID|   Bounds   3            -36      35                Points:          72
+
+ RS_GRID| Information for grid number                                          9
+ RS_GRID|   Bounds   1            -22      22                Points:          45
+ RS_GRID|   Bounds   2            -22      22                Points:          45
+ RS_GRID|   Bounds   3            -22      22                Points:          45
+
+ RS_GRID| Information for grid number                                         10
+ RS_GRID|   Bounds   1            -12      11                Points:          24
+ RS_GRID|   Bounds   2            -12      11                Points:          24
+ RS_GRID|   Bounds   3            -12      11                Points:          24
+
+  HFX_INFO| Replica ID:                                                        1
+  HFX_INFO| FRACTION:                                               0.2000000000
+  HFX_INFO| Interaction Potential:                                       COULOMB
+  HFX_INFO| EPS_SCHWARZ:                                                 1.0E-12
+  HFX_INFO| EPS_SCHWARZ_FORCES                                           1.0E-10
+  HFX_INFO| EPS_STORAGE_SCALING:                                         1.0E+00
+  HFX_INFO| NBINS:                                                            64
+  HFX_INFO| BLOCK_SIZE:                                                        1
+  HFX_INFO| Number of periodic shells considered:                           NONE
+  HFX_INFO| Number of periodic cells considered:                            NONE
+
+
+ Number of electrons:                                                         10
+ Number of occupied orbitals:                                                  5
+ Number of molecular orbitals:                                                 5
+
+ Number of orbital functions:                                                 18
+ Number of independent orbital functions:                                     18
+
+ Extrapolation method: initial_guess
+
+ Atomic guess: The first density matrix is obtained in terms of atomic orbitals
+               and electronic configurations assigned to each atomic kind
+
+ Guess for atomic kind: O
+
+ Electronic structure
+    Total number of core electrons                                          0.00
+    Total number of valence electrons                                       8.00
+    Total number of electrons                                               8.00
+    Multiplicity                                                   not specified
+    S      2.00  2.00
+    P      4.00
+
+
+ *******************************************************************************
+                  Iteration          Convergence                     Energy [au]
+ *******************************************************************************
+                          1        0.655772                     -74.365044926440
+                          2        0.591398                     -74.373070150969
+                          3        0.314610E-02                 -74.426128066435
+                          4        0.143414E-03                 -74.426129509314
+                          5        0.146754E-07                 -74.426129512300
+
+ Energy components [Hartree]           Total Energy ::          -74.426129512300
+                                        Band Energy ::          -40.441471787776
+                                     Kinetic Energy ::           74.391638252481
+                                   Potential Energy ::         -148.817767764781
+                                      Virial (-V/T) ::            2.000463644310
+                                        Core Energy ::         -103.093738293087
+                                          XC Energy ::           -7.797708756806
+                                     Coulomb Energy ::           36.465317537593
+
+ Orbital energies  State     L     Occupation   Energy[a.u.]          Energy[eV]
+
+                       1     0          2.000     -18.744688         -510.068901
+                       2     0          2.000      -0.849262          -23.109589
+
+                       1     1          4.000      -0.313393           -8.527858
+
+
+ Total Electron Density at R=0:                                       291.748413
+
+ Guess for atomic kind: H
+
+ Electronic structure
+    Total number of core electrons                                          0.00
+    Total number of valence electrons                                       1.00
+    Total number of electrons                                               1.00
+    Multiplicity                                                   not specified
+    S      1.00
+
+
+ *******************************************************************************
+                  Iteration          Convergence                     Energy [au]
+ *******************************************************************************
+                          1        0.502404E-02                  -0.441325540056
+                          2        0.522832E-03                  -0.441349393639
+                          3        0.301099E-06                  -0.441349654539
+
+ Energy components [Hartree]           Total Energy ::           -0.441349654539
+                                        Band Energy ::           -0.216801172801
+                                     Kinetic Energy ::            0.454184081902
+                                   Potential Energy ::           -0.895533736441
+                                      Virial (-V/T) ::            1.971741793966
+                                        Core Energy ::           -0.496336883353
+                                          XC Energy ::           -0.243413654052
+                                     Coulomb Energy ::            0.298400882866
+
+ Orbital energies  State     L     Occupation   Energy[a.u.]          Energy[eV]
+
+                       1     0          1.000      -0.216801           -5.899460
+
+
+ Total Electron Density at R=0:                                         0.248919
+ Re-scaling the density matrix to get the right number of electrons
+                  # Electrons              Trace(P)               Scaling factor
+                           10                10.000                        1.000
+
+
+ SCF WAVEFUNCTION OPTIMIZATION
+
+  ----------------------------------- OT ---------------------------------------
+  Minimizer      : DIIS                : direct inversion
+                                         in the iterative subspace
+                                         using   7 DIIS vectors
+                                         safer DIIS on
+  Preconditioner : FULL_ALL            : diagonalization, state selective
+  Precond_solver : DEFAULT
+  stepsize       :    0.15000000                  energy_gap     :    0.08000000
+  eps_taylor     :   0.10000E-15                  max_taylor     :             4
+  ----------------------------------- OT ---------------------------------------
+
+  Step     Update method      Time    Convergence         Total energy    Change
+  ------------------------------------------------------------------------------
+
+  HFX_MEM_INFO| Est. max. program size before HFX [MiB]:                    1083
+  HFX_MEM_INFO| Number of cart. primitive ERI's calculated:               861788
+  HFX_MEM_INFO| Number of sph. ERI's calculated:                           54864
+  HFX_MEM_INFO| Number of sph. ERI's stored in-core:                       54864
+  HFX_MEM_INFO| Number of sph. ERI's stored on disk:                           0
+  HFX_MEM_INFO| Number of sph. ERI's calculated on the fly:                    0
+  HFX_MEM_INFO| Total memory consumption ERI's RAM [MiB]:                      1
+  HFX_MEM_INFO| Whereof max-vals [MiB]:                                        1
+  HFX_MEM_INFO| Total compression factor ERI's RAM:                         2.06
+  HFX_MEM_INFO| Total memory consumption ERI's disk [MiB]:                     0
+  HFX_MEM_INFO| Total compression factor ERI's disk:                        0.00
+  HFX_MEM_INFO| Size of density/Fock matrix [MiB]:                             0
+  HFX_MEM_INFO| Size of buffers [MiB]:                                         0
+  HFX_MEM_INFO| Est. max. program size after HFX  [MiB]:                    1086
+
+     1 OT DIIS     0.15E+00    3.4     0.38723552       -74.7973838199 -7.48E+01
+     2 OT DIIS     0.15E+00    2.5     0.14835857       -76.1650701674 -1.37E+00
+     3 OT DIIS     0.15E+00    2.4     0.04429300       -76.3889743732 -2.24E-01
+     4 OT DIIS     0.15E+00    2.3     0.01448606       -76.4012723112 -1.23E-02
+     5 OT DIIS     0.15E+00    2.3     0.00766744       -76.4045527677 -3.28E-03
+     6 OT DIIS     0.15E+00    2.4     0.00304849       -76.4057162197 -1.16E-03
+     7 OT DIIS     0.15E+00    2.4     0.00083569       -76.4059213566 -2.05E-04
+     8 OT DIIS     0.15E+00    2.3     0.00027629       -76.4059348133 -1.35E-05
+     9 OT DIIS     0.15E+00    2.4     0.00009467       -76.4059360963 -1.28E-06
+    10 OT DIIS     0.15E+00    2.4     0.00002770       -76.4059362702 -1.74E-07
+
+  Leaving inner SCF loop after reaching    10 steps.
+
+
+  Electronic density on regular grids:         -8.0122875209        1.9877124791
+  Core density on regular grids:               10.0000000000        0.0000000000
+  Hard and soft densities (Lebedev):          -14.7175297308      -12.7298178809
+  Total Rho_soft + Rho1_hard - Rho1_soft       -9.9999993707
+  Total charge density (r-space):               0.0000006293
+  Total Rho_soft + Rho0_soft (g-space):        -0.0000010258
+
+  Overlap energy of the core charge distribution:               0.00000014706724
+  Self energy of the core charge distribution:                -75.73106814560732
+  Core Hamiltonian energy:                                     -5.26883355330391
+  Hartree energy:                                              21.72887536730413
+  Exchange-correlation energy:                                 -3.51334418034399
+  Hartree-Fock Exchange energy:                                -1.79396577392400
+
+  GAPW| Exc from hard and soft atomic rho1:                    -4.06272299086758
+  GAPW| local Eh = 1 center integrals:                         -7.76487714054265
+
+  Total energy:                                               -76.40593627021808
+
+  outer SCF iter =    1 RMS gradient =   0.28E-04 energy =        -76.4059362702
+
+  ----------------------------------- OT ---------------------------------------
+  Minimizer      : DIIS                : direct inversion
+                                         in the iterative subspace
+                                         using   7 DIIS vectors
+                                         safer DIIS on
+  Preconditioner : FULL_ALL            : diagonalization, state selective
+  Precond_solver : DEFAULT
+  stepsize       :    0.15000000                  energy_gap     :    0.08000000
+  eps_taylor     :   0.10000E-15                  max_taylor     :             4
+  ----------------------------------- OT ---------------------------------------
+
+  Step     Update method      Time    Convergence         Total energy    Change
+  ------------------------------------------------------------------------------
+     1 OT DIIS     0.15E+00    4.7     0.00001579       -76.4059362821 -1.19E-08
+     2 OT DIIS     0.15E+00    2.4     0.00000728       -76.4059362846 -2.44E-09
+     3 OT DIIS     0.15E+00    2.4     0.00000126       -76.4059362852 -6.58E-10
+     4 OT DIIS     0.15E+00    2.3     0.00000025       -76.4059362852 -1.03E-11
+     5 OT DIIS     0.15E+00    2.4     0.00000004       -76.4059362852  2.17E-12
+
+  *** SCF run converged in     5 steps ***
+
+
+  Electronic density on regular grids:         -8.0122885188        1.9877114812
+  Core density on regular grids:               10.0000000000        0.0000000000
+  Hard and soft densities (Lebedev):          -14.7175200960      -12.7298092440
+  Total Rho_soft + Rho1_hard - Rho1_soft       -9.9999993708
+  Total charge density (r-space):               0.0000006292
+  Total Rho_soft + Rho0_soft (g-space):        -0.0000010259
+
+  Overlap energy of the core charge distribution:               0.00000014706724
+  Self energy of the core charge distribution:                -75.73106814560732
+  Core Hamiltonian energy:                                     -5.26876660627476
+  Hartree energy:                                              21.72881896775564
+  Exchange-correlation energy:                                 -3.51335343956674
+  Hartree-Fock Exchange energy:                                -1.79396837460585
+
+  GAPW| Exc from hard and soft atomic rho1:                    -4.06272508271157
+  GAPW| local Eh = 1 center integrals:                         -7.76487375129066
+
+  Total energy:                                               -76.40593628523403
+
+  outer SCF iter =    2 RMS gradient =   0.42E-07 energy =        -76.4059362852
+  outer SCF loop converged in   2 iterations or   15 steps
+
+
+ !-----------------------------------------------------------------------------!
+                     Mulliken Population Analysis
+
+ #  Atom  Element  Kind  Atomic population                           Net charge
+       1     O        1          8.800651                             -0.800651
+       2     H        2          0.599675                              0.400325
+       3     H        2          0.599675                              0.400325
+ # Total charge                             10.000000                 -0.000000
+
+ !-----------------------------------------------------------------------------!
+
+ !-----------------------------------------------------------------------------!
+                           Hirshfeld Charges
+
+  #Atom  Element  Kind  Ref Charge     Population                    Net charge
+      1       O      1       8.000          9.167                        -1.167
+      2       H      2       1.000          0.415                         0.585
+      3       H      2       1.000          0.415                         0.585
+
+  Total Charge                                                            0.002
+ !-----------------------------------------------------------------------------!
+
+  HFX_MEM_INFO| Number of cart. primitive DERIV's calculated:           10245984
+  HFX_MEM_INFO| Number of sph. DERIV's calculated:                        658368
+  HFX_MEM_INFO| Number of sph. DERIV's stored in-core:                         0
+  HFX_MEM_INFO| Number of sph. DERIV's calculated on the fly:             658368
+  HFX_MEM_INFO| Total memory consumption DERIV's RAM [MiB]:                    0
+  HFX_MEM_INFO| Whereof max-vals [MiB]:                                        1
+  HFX_MEM_INFO| Total compression factor DERIV's RAM:                       0.00
+
+
+ ENERGY| Total FORCE_EVAL ( QS ) energy [a.u.]:              -76.405936285237047
+
+ Number of electrons:                                                         10
+ Number of occupied orbitals:                                                  5
+ Number of molecular orbitals:                                                 5
+
+ Number of orbital functions:                                                 18
+ Number of independent orbital functions:                                     18
+
+ Parameters for the always stable predictor-corrector (ASPC) method:
+
+  ASPC order: 0
+
+  B(1) =   1.000000
+
+ Extrapolation method: ASPC
+
+
+ SCF WAVEFUNCTION OPTIMIZATION
+
+  ----------------------------------- OT ---------------------------------------
+  Minimizer      : DIIS                : direct inversion
+                                         in the iterative subspace
+                                         using   7 DIIS vectors
+                                         safer DIIS on
+  Preconditioner : FULL_ALL            : diagonalization, state selective
+  Precond_solver : DEFAULT
+  stepsize       :    0.15000000                  energy_gap     :    0.08000000
+  eps_taylor     :   0.10000E-15                  max_taylor     :             4
+  ----------------------------------- OT ---------------------------------------
+
+  Step     Update method      Time    Convergence         Total energy    Change
+  ------------------------------------------------------------------------------
+
+  HFX_MEM_INFO| Est. max. program size before HFX [MiB]:                    1105
+  HFX_MEM_INFO| Number of cart. primitive ERI's calculated:               862022
+  HFX_MEM_INFO| Number of sph. ERI's calculated:                           54864
+  HFX_MEM_INFO| Number of sph. ERI's stored in-core:                       54864
+  HFX_MEM_INFO| Number of sph. ERI's stored on disk:                           0
+  HFX_MEM_INFO| Number of sph. ERI's calculated on the fly:                    0
+  HFX_MEM_INFO| Total memory consumption ERI's RAM [MiB]:                      1
+  HFX_MEM_INFO| Whereof max-vals [MiB]:                                        1
+  HFX_MEM_INFO| Total compression factor ERI's RAM:                         2.06
+  HFX_MEM_INFO| Total memory consumption ERI's disk [MiB]:                     0
+  HFX_MEM_INFO| Total compression factor ERI's disk:                        0.00
+  HFX_MEM_INFO| Size of density/Fock matrix [MiB]:                             0
+  HFX_MEM_INFO| Size of buffers [MiB]:                                         0
+  HFX_MEM_INFO| Est. max. program size after HFX  [MiB]:                    1105
+
+     1 OT DIIS     0.15E+00    2.2     0.00120877       -76.4056421160 -7.64E+01
+     2 OT DIIS     0.15E+00    2.4     0.00052862       -76.4056537980 -1.17E-05
+     3 OT DIIS     0.15E+00    2.4     0.00023372       -76.4056560514 -2.25E-06
+     4 OT DIIS     0.15E+00    2.4     0.00001545       -76.4056566155 -5.64E-07
+     5 OT DIIS     0.15E+00    2.4     0.00000321       -76.4056566183 -2.80E-09
+     6 OT DIIS     0.15E+00    2.4     0.00000028       -76.4056566184 -1.26E-10
+     7 OT DIIS     0.15E+00    2.4     0.00000004       -76.4056566184  2.42E-12
+
+  *** SCF run converged in     7 steps ***
+
+
+  Electronic density on regular grids:         -8.0119810161        1.9880189839
+  Core density on regular grids:               10.0000000000        0.0000000000
+  Hard and soft densities (Lebedev):          -14.7499043000      -12.7618859528
+  Total Rho_soft + Rho1_hard - Rho1_soft       -9.9999993634
+  Total charge density (r-space):               0.0000006366
+  Total Rho_soft + Rho0_soft (g-space):        -0.0000010218
+
+  Overlap energy of the core charge distribution:               0.00000016457780
+  Self energy of the core charge distribution:                -75.73106814560732
+  Core Hamiltonian energy:                                     -5.25808263541417
+  Hartree energy:                                              21.72077422739856
+  Exchange-correlation energy:                                 -3.51552079065547
+  Hartree-Fock Exchange energy:                                -1.79465745201576
+
+  GAPW| Exc from hard and soft atomic rho1:                    -4.06300907805030
+  GAPW| local Eh = 1 center integrals:                         -7.76409290866301
+
+  Total energy:                                               -76.40565661842969
+
+  outer SCF iter =    1 RMS gradient =   0.42E-07 energy =        -76.4056566184
+  outer SCF loop converged in   1 iterations or    7 steps
+
+
+ !-----------------------------------------------------------------------------!
+                     Mulliken Population Analysis
+
+ #  Atom  Element  Kind  Atomic population                           Net charge
+       1     O        1          8.801978                             -0.801978
+       2     H        2          0.599010                              0.400990
+       3     H        2          0.599012                              0.400988
+ # Total charge                             10.000000                  0.000000
+
+ !-----------------------------------------------------------------------------!
+
+ !-----------------------------------------------------------------------------!
+                           Hirshfeld Charges
+
+  #Atom  Element  Kind  Ref Charge     Population                    Net charge
+      1       O      1       8.000          9.167                        -1.167
+      2       H      2       1.000          0.415                         0.585
+      3       H      2       1.000          0.415                         0.585
+
+  Total Charge                                                            0.002
+ !-----------------------------------------------------------------------------!
+
+  HFX_MEM_INFO| Number of cart. primitive DERIV's calculated:           10246056
+  HFX_MEM_INFO| Number of sph. DERIV's calculated:                        658368
+  HFX_MEM_INFO| Number of sph. DERIV's stored in-core:                         0
+  HFX_MEM_INFO| Number of sph. DERIV's calculated on the fly:             658368
+  HFX_MEM_INFO| Total memory consumption DERIV's RAM [MiB]:                    0
+  HFX_MEM_INFO| Whereof max-vals [MiB]:                                        1
+  HFX_MEM_INFO| Total compression factor DERIV's RAM:                       0.00
+
+
+ ENERGY| Total FORCE_EVAL ( QS ) energy [a.u.]:              -76.405656618427827
+
+ Number of electrons:                                                         10
+ Number of occupied orbitals:                                                  5
+ Number of molecular orbitals:                                                 5
+
+ Number of orbital functions:                                                 18
+ Number of independent orbital functions:                                     18
+
+ Parameters for the always stable predictor-corrector (ASPC) method:
+
+  ASPC order: 0
+
+  B(1) =   2.000000
+  B(2) =  -1.000000
+
+ Extrapolation method: ASPC
+
+
+ SCF WAVEFUNCTION OPTIMIZATION
+
+  ----------------------------------- OT ---------------------------------------
+  Minimizer      : DIIS                : direct inversion
+                                         in the iterative subspace
+                                         using   7 DIIS vectors
+                                         safer DIIS on
+  Preconditioner : FULL_ALL            : diagonalization, state selective
+  Precond_solver : DEFAULT
+  stepsize       :    0.15000000                  energy_gap     :    0.08000000
+  eps_taylor     :   0.10000E-15                  max_taylor     :             4
+  ----------------------------------- OT ---------------------------------------
+
+  Step     Update method      Time    Convergence         Total energy    Change
+  ------------------------------------------------------------------------------
+
+  HFX_MEM_INFO| Est. max. program size before HFX [MiB]:                    1105
+  HFX_MEM_INFO| Number of cart. primitive ERI's calculated:               862022
+  HFX_MEM_INFO| Number of sph. ERI's calculated:                           54864
+  HFX_MEM_INFO| Number of sph. ERI's stored in-core:                       54864
+  HFX_MEM_INFO| Number of sph. ERI's stored on disk:                           0
+  HFX_MEM_INFO| Number of sph. ERI's calculated on the fly:                    0
+  HFX_MEM_INFO| Total memory consumption ERI's RAM [MiB]:                      1
+  HFX_MEM_INFO| Whereof max-vals [MiB]:                                        1
+  HFX_MEM_INFO| Total compression factor ERI's RAM:                         2.06
+  HFX_MEM_INFO| Total memory consumption ERI's disk [MiB]:                     0
+  HFX_MEM_INFO| Total compression factor ERI's disk:                        0.00
+  HFX_MEM_INFO| Size of density/Fock matrix [MiB]:                             0
+  HFX_MEM_INFO| Size of buffers [MiB]:                                         0
+  HFX_MEM_INFO| Est. max. program size after HFX  [MiB]:                    1105
+
+     1 OT DIIS     0.15E+00    2.2     0.00153135       -76.4056304700 -7.64E+01
+     2 OT DIIS     0.15E+00    2.4     0.00068099       -76.4056508577 -2.04E-05
+     3 OT DIIS     0.15E+00    2.4     0.00029306       -76.4056551686 -4.31E-06
+     4 OT DIIS     0.15E+00    2.4     0.00002157       -76.4056559891 -8.21E-07
+     5 OT DIIS     0.15E+00    2.4     0.00000435       -76.4056559947 -5.58E-09
+     6 OT DIIS     0.15E+00    2.4     0.00000036       -76.4056559949 -2.35E-10
+     7 OT DIIS     0.15E+00    2.3     0.00000006       -76.4056559949 -3.34E-12
+
+  *** SCF run converged in     7 steps ***
+
+
+  Electronic density on regular grids:         -8.0119804657        1.9880195343
+  Core density on regular grids:               10.0000000000        0.0000000000
+  Hard and soft densities (Lebedev):          -14.7499800605      -12.7619611629
+  Total Rho_soft + Rho1_hard - Rho1_soft       -9.9999993634
+  Total charge density (r-space):               0.0000006366
+  Total Rho_soft + Rho0_soft (g-space):        -0.0000010190
+
+  Overlap energy of the core charge distribution:               0.00000016462090
+  Self energy of the core charge distribution:                -75.73106814560732
+  Core Hamiltonian energy:                                     -5.25805786460510
+  Hartree energy:                                              21.72075602563158
+  Exchange-correlation energy:                                 -3.51552596781673
+  Hartree-Fock Exchange energy:                                -1.79465905513839
+
+  GAPW| Exc from hard and soft atomic rho1:                    -4.06300966131775
+  GAPW| local Eh = 1 center integrals:                         -7.76409149069688
+
+  Total energy:                                               -76.40565599492969
+
+  outer SCF iter =    1 RMS gradient =   0.60E-07 energy =        -76.4056559949
+  outer SCF loop converged in   1 iterations or    7 steps
+
+
+ !-----------------------------------------------------------------------------!
+                     Mulliken Population Analysis
+
+ #  Atom  Element  Kind  Atomic population                           Net charge
+       1     O        1          8.801979                             -0.801979
+       2     H        2          0.599010                              0.400990
+       3     H        2          0.599010                              0.400990
+ # Total charge                             10.000000                 -0.000000
+
+ !-----------------------------------------------------------------------------!
+
+ !-----------------------------------------------------------------------------!
+                           Hirshfeld Charges
+
+  #Atom  Element  Kind  Ref Charge     Population                    Net charge
+      1       O      1       8.000          9.167                        -1.167
+      2       H      2       1.000          0.415                         0.585
+      3       H      2       1.000          0.415                         0.585
+
+  Total Charge                                                            0.002
+ !-----------------------------------------------------------------------------!
+
+  HFX_MEM_INFO| Number of cart. primitive DERIV's calculated:           10246056
+  HFX_MEM_INFO| Number of sph. DERIV's calculated:                        658368
+  HFX_MEM_INFO| Number of sph. DERIV's stored in-core:                         0
+  HFX_MEM_INFO| Number of sph. DERIV's calculated on the fly:             658368
+  HFX_MEM_INFO| Total memory consumption DERIV's RAM [MiB]:                    0
+  HFX_MEM_INFO| Whereof max-vals [MiB]:                                        1
+  HFX_MEM_INFO| Total compression factor DERIV's RAM:                       0.00
+
+
+ ENERGY| Total FORCE_EVAL ( QS ) energy [a.u.]:              -76.405655994929191
+
+ Number of electrons:                                                         10
+ Number of occupied orbitals:                                                  5
+ Number of molecular orbitals:                                                 5
+
+ Number of orbital functions:                                                 18
+ Number of independent orbital functions:                                     18
+
+ Parameters for the always stable predictor-corrector (ASPC) method:
+
+  ASPC order: 1
+
+  B(1) =   2.500000
+  B(2) =  -2.000000
+  B(3) =   0.500000
+
+ Extrapolation method: ASPC
+
+
+ SCF WAVEFUNCTION OPTIMIZATION
+
+  ----------------------------------- OT ---------------------------------------
+  Minimizer      : DIIS                : direct inversion
+                                         in the iterative subspace
+                                         using   7 DIIS vectors
+                                         safer DIIS on
+  Preconditioner : FULL_ALL            : diagonalization, state selective
+  Precond_solver : DEFAULT
+  stepsize       :    0.15000000                  energy_gap     :    0.08000000
+  eps_taylor     :   0.10000E-15                  max_taylor     :             4
+  ----------------------------------- OT ---------------------------------------
+
+  Step     Update method      Time    Convergence         Total energy    Change
+  ------------------------------------------------------------------------------
+
+  HFX_MEM_INFO| Est. max. program size before HFX [MiB]:                    1105
+  HFX_MEM_INFO| Number of cart. primitive ERI's calculated:               862090
+  HFX_MEM_INFO| Number of sph. ERI's calculated:                           54864
+  HFX_MEM_INFO| Number of sph. ERI's stored in-core:                       54864
+  HFX_MEM_INFO| Number of sph. ERI's stored on disk:                           0
+  HFX_MEM_INFO| Number of sph. ERI's calculated on the fly:                    0
+  HFX_MEM_INFO| Total memory consumption ERI's RAM [MiB]:                      1
+  HFX_MEM_INFO| Whereof max-vals [MiB]:                                        1
+  HFX_MEM_INFO| Total compression factor ERI's RAM:                         2.06
+  HFX_MEM_INFO| Total memory consumption ERI's disk [MiB]:                     0
+  HFX_MEM_INFO| Total compression factor ERI's disk:                        0.00
+  HFX_MEM_INFO| Size of density/Fock matrix [MiB]:                             0
+  HFX_MEM_INFO| Size of buffers [MiB]:                                         0
+  HFX_MEM_INFO| Est. max. program size after HFX  [MiB]:                    1105
+
+     1 OT DIIS     0.15E+00    2.2     0.00195130       -76.4052885236 -7.64E+01
+     2 OT DIIS     0.15E+00    2.4     0.00085718       -76.4053199143 -3.14E-05
+     3 OT DIIS     0.15E+00    2.4     0.00037869       -76.4053261438 -6.23E-06
+     4 OT DIIS     0.15E+00    2.4     0.00002595       -76.4053275992 -1.46E-06
+     5 OT DIIS     0.15E+00    2.5     0.00000527       -76.4053276072 -8.02E-09
+     6 OT DIIS     0.15E+00    2.4     0.00000048       -76.4053276075 -3.42E-10
+     7 OT DIIS     0.15E+00    2.4     0.00000010       -76.4053276075 -2.52E-12
+
+  *** SCF run converged in     7 steps ***
+
+
+  Electronic density on regular grids:         -8.0116717779        1.9883282221
+  Core density on regular grids:               10.0000000000        0.0000000000
+  Hard and soft densities (Lebedev):          -14.7822261409      -12.7938985626
+  Total Rho_soft + Rho1_hard - Rho1_soft       -9.9999993562
+  Total charge density (r-space):               0.0000006438
+  Total Rho_soft + Rho0_soft (g-space):        -0.0000010116
+
+  Overlap energy of the core charge distribution:               0.00000018408459
+  Self energy of the core charge distribution:                -75.73106814560732
+  Core Hamiltonian energy:                                     -5.24731895825232
+  Hartree energy:                                              21.71270312416964
+  Exchange-correlation energy:                                 -3.51769426507881
+  Hartree-Fock Exchange energy:                                -1.79534786086658
+
+  GAPW| Exc from hard and soft atomic rho1:                    -4.06329575756257
+  GAPW| local Eh = 1 center integrals:                         -7.76330592843513
+
+  Total energy:                                               -76.40532760754853
+
+  outer SCF iter =    1 RMS gradient =   0.97E-07 energy =        -76.4053276075
+  outer SCF loop converged in   1 iterations or    7 steps
+
+
+ !-----------------------------------------------------------------------------!
+                     Mulliken Population Analysis
+
+ #  Atom  Element  Kind  Atomic population                           Net charge
+       1     O        1          8.803257                             -0.803257
+       2     H        2          0.598372                              0.401628
+       3     H        2          0.598372                              0.401628
+ # Total charge                             10.000000                  0.000000
+
+ !-----------------------------------------------------------------------------!
+
+ !-----------------------------------------------------------------------------!
+                           Hirshfeld Charges
+
+  #Atom  Element  Kind  Ref Charge     Population                    Net charge
+      1       O      1       8.000          9.167                        -1.167
+      2       H      2       1.000          0.416                         0.584
+      3       H      2       1.000          0.416                         0.584
+
+  Total Charge                                                            0.002
+ !-----------------------------------------------------------------------------!
+
+  HFX_MEM_INFO| Number of cart. primitive DERIV's calculated:           10246368
+  HFX_MEM_INFO| Number of sph. DERIV's calculated:                        658368
+  HFX_MEM_INFO| Number of sph. DERIV's stored in-core:                         0
+  HFX_MEM_INFO| Number of sph. DERIV's calculated on the fly:             658368
+  HFX_MEM_INFO| Total memory consumption DERIV's RAM [MiB]:                    0
+  HFX_MEM_INFO| Whereof max-vals [MiB]:                                        1
+  HFX_MEM_INFO| Total compression factor DERIV's RAM:                       0.00
+
+
+ ENERGY| Total FORCE_EVAL ( QS ) energy [a.u.]:              -76.405327607547022
+
+ Number of electrons:                                                         10
+ Number of occupied orbitals:                                                  5
+ Number of molecular orbitals:                                                 5
+
+ Number of orbital functions:                                                 18
+ Number of independent orbital functions:                                     18
+
+ Parameters for the always stable predictor-corrector (ASPC) method:
+
+  ASPC order: 2
+
+  B(1) =   2.800000
+  B(2) =  -2.800000
+  B(3) =   1.200000
+  B(4) =  -0.200000
+
+ Extrapolation method: ASPC
+
+
+ SCF WAVEFUNCTION OPTIMIZATION
+
+  ----------------------------------- OT ---------------------------------------
+  Minimizer      : DIIS                : direct inversion
+                                         in the iterative subspace
+                                         using   7 DIIS vectors
+                                         safer DIIS on
+  Preconditioner : FULL_ALL            : diagonalization, state selective
+  Precond_solver : DEFAULT
+  stepsize       :    0.15000000                  energy_gap     :    0.08000000
+  eps_taylor     :   0.10000E-15                  max_taylor     :             4
+  ----------------------------------- OT ---------------------------------------
+
+  Step     Update method      Time    Convergence         Total energy    Change
+  ------------------------------------------------------------------------------
+
+  HFX_MEM_INFO| Est. max. program size before HFX [MiB]:                    1105
+  HFX_MEM_INFO| Number of cart. primitive ERI's calculated:               862022
+  HFX_MEM_INFO| Number of sph. ERI's calculated:                           54864
+  HFX_MEM_INFO| Number of sph. ERI's stored in-core:                       54864
+  HFX_MEM_INFO| Number of sph. ERI's stored on disk:                           0
+  HFX_MEM_INFO| Number of sph. ERI's calculated on the fly:                    0
+  HFX_MEM_INFO| Total memory consumption ERI's RAM [MiB]:                      1
+  HFX_MEM_INFO| Whereof max-vals [MiB]:                                        1
+  HFX_MEM_INFO| Total compression factor ERI's RAM:                         2.06
+  HFX_MEM_INFO| Total memory consumption ERI's disk [MiB]:                     0
+  HFX_MEM_INFO| Total compression factor ERI's disk:                        0.00
+  HFX_MEM_INFO| Size of density/Fock matrix [MiB]:                             0
+  HFX_MEM_INFO| Size of buffers [MiB]:                                         0
+  HFX_MEM_INFO| Est. max. program size after HFX  [MiB]:                    1105
+
+     1 OT DIIS     0.15E+00    2.2     0.00345747       -76.4055411469 -7.64E+01
+     2 OT DIIS     0.15E+00    2.4     0.00150337       -76.4056344651 -9.33E-05
+     3 OT DIIS     0.15E+00    2.4     0.00065902       -76.4056520704 -1.76E-05
+     4 OT DIIS     0.15E+00    2.4     0.00004073       -76.4056565985 -4.53E-06
+     5 OT DIIS     0.15E+00    2.4     0.00000861       -76.4056566175 -1.91E-08
+     6 OT DIIS     0.15E+00    2.3     0.00000085       -76.4056566185 -9.22E-10
+     7 OT DIIS     0.15E+00    2.4     0.00000023       -76.4056566185 -1.63E-11
+     8 OT DIIS     0.15E+00    2.4     0.00000002       -76.4056566185 -4.39E-12
+
+  *** SCF run converged in     8 steps ***
+
+
+  Electronic density on regular grids:         -8.0119810300        1.9880189700
+  Core density on regular grids:               10.0000000000        0.0000000000
+  Hard and soft densities (Lebedev):          -14.7499043094      -12.7618859761
+  Total Rho_soft + Rho1_hard - Rho1_soft       -9.9999993634
+  Total charge density (r-space):               0.0000006366
+  Total Rho_soft + Rho0_soft (g-space):        -0.0000010218
+
+  Overlap energy of the core charge distribution:               0.00000016457780
+  Self energy of the core charge distribution:                -75.73106814560732
+  Core Hamiltonian energy:                                     -5.25808304938290
+  Hartree energy:                                              21.72077461229475
+  Exchange-correlation energy:                                 -3.51552073952234
+  Hartree-Fock Exchange energy:                                -1.79465743630182
+
+  GAPW| Exc from hard and soft atomic rho1:                    -4.06300906474122
+  GAPW| local Eh = 1 center integrals:                         -7.76409295980195
+
+  Total energy:                                               -76.40565661848501
+
+  outer SCF iter =    1 RMS gradient =   0.16E-07 energy =        -76.4056566185
+  outer SCF loop converged in   1 iterations or    8 steps
+
+
+ !-----------------------------------------------------------------------------!
+                     Mulliken Population Analysis
+
+ #  Atom  Element  Kind  Atomic population                           Net charge
+       1     O        1          8.801978                             -0.801978
+       2     H        2          0.599010                              0.400990
+       3     H        2          0.599012                              0.400988
+ # Total charge                             10.000000                 -0.000000
+
+ !-----------------------------------------------------------------------------!
+
+ !-----------------------------------------------------------------------------!
+                           Hirshfeld Charges
+
+  #Atom  Element  Kind  Ref Charge     Population                    Net charge
+      1       O      1       8.000          9.167                        -1.167
+      2       H      2       1.000          0.415                         0.585
+      3       H      2       1.000          0.415                         0.585
+
+  Total Charge                                                            0.002
+ !-----------------------------------------------------------------------------!
+
+  HFX_MEM_INFO| Number of cart. primitive DERIV's calculated:           10246056
+  HFX_MEM_INFO| Number of sph. DERIV's calculated:                        658368
+  HFX_MEM_INFO| Number of sph. DERIV's stored in-core:                         0
+  HFX_MEM_INFO| Number of sph. DERIV's calculated on the fly:             658368
+  HFX_MEM_INFO| Total memory consumption DERIV's RAM [MiB]:                    0
+  HFX_MEM_INFO| Whereof max-vals [MiB]:                                        1
+  HFX_MEM_INFO| Total compression factor DERIV's RAM:                       0.00
+
+
+ ENERGY| Total FORCE_EVAL ( QS ) energy [a.u.]:              -76.405656618487797
+
+ Number of electrons:                                                         10
+ Number of occupied orbitals:                                                  5
+ Number of molecular orbitals:                                                 5
+
+ Number of orbital functions:                                                 18
+ Number of independent orbital functions:                                     18
+
+ Parameters for the always stable predictor-corrector (ASPC) method:
+
+  ASPC order: 3
+
+  B(1) =   3.000000
+  B(2) =  -3.428571
+  B(3) =   1.928571
+  B(4) =  -0.571429
+  B(5) =   0.071429
+
+ Extrapolation method: ASPC
+
+
+ SCF WAVEFUNCTION OPTIMIZATION
+
+  ----------------------------------- OT ---------------------------------------
+  Minimizer      : DIIS                : direct inversion
+                                         in the iterative subspace
+                                         using   7 DIIS vectors
+                                         safer DIIS on
+  Preconditioner : FULL_ALL            : diagonalization, state selective
+  Precond_solver : DEFAULT
+  stepsize       :    0.15000000                  energy_gap     :    0.08000000
+  eps_taylor     :   0.10000E-15                  max_taylor     :             4
+  ----------------------------------- OT ---------------------------------------
+
+  Step     Update method      Time    Convergence         Total energy    Change
+  ------------------------------------------------------------------------------
+
+  HFX_MEM_INFO| Est. max. program size before HFX [MiB]:                    1105
+  HFX_MEM_INFO| Number of cart. primitive ERI's calculated:               862022
+  HFX_MEM_INFO| Number of sph. ERI's calculated:                           54864
+  HFX_MEM_INFO| Number of sph. ERI's stored in-core:                       54864
+  HFX_MEM_INFO| Number of sph. ERI's stored on disk:                           0
+  HFX_MEM_INFO| Number of sph. ERI's calculated on the fly:                    0
+  HFX_MEM_INFO| Total memory consumption ERI's RAM [MiB]:                      1
+  HFX_MEM_INFO| Whereof max-vals [MiB]:                                        1
+  HFX_MEM_INFO| Total compression factor ERI's RAM:                         2.06
+  HFX_MEM_INFO| Total memory consumption ERI's disk [MiB]:                     0
+  HFX_MEM_INFO| Total compression factor ERI's disk:                        0.00
+  HFX_MEM_INFO| Size of density/Fock matrix [MiB]:                             0
+  HFX_MEM_INFO| Size of buffers [MiB]:                                         0
+  HFX_MEM_INFO| Est. max. program size after HFX  [MiB]:                    1105
+
+     1 OT DIIS     0.15E+00    2.2     0.00427136       -76.4054753647 -7.64E+01
+     2 OT DIIS     0.15E+00    2.4     0.00187071       -76.4056207568 -1.45E-04
+     3 OT DIIS     0.15E+00    2.4     0.00082793       -76.4056488457 -2.81E-05
+     4 OT DIIS     0.15E+00    2.4     0.00005467       -76.4056559580 -7.11E-06
+     5 OT DIIS     0.15E+00    2.4     0.00001111       -76.4056559934 -3.54E-08
+     6 OT DIIS     0.15E+00    2.3     0.00000121       -76.4056559949 -1.52E-09
+     7 OT DIIS     0.15E+00    2.4     0.00000038       -76.4056559950 -2.22E-11
+     8 OT DIIS     0.15E+00    2.4     0.00000002       -76.4056559950 -8.33E-12
+
+  *** SCF run converged in     8 steps ***
+
+
+  Electronic density on regular grids:         -8.0119804640        1.9880195360
+  Core density on regular grids:               10.0000000000        0.0000000000
+  Hard and soft densities (Lebedev):          -14.7499800719      -12.7619611725
+  Total Rho_soft + Rho1_hard - Rho1_soft       -9.9999993634
+  Total charge density (r-space):               0.0000006366
+  Total Rho_soft + Rho0_soft (g-space):        -0.0000010190
+
+  Overlap energy of the core charge distribution:               0.00000016462090
+  Self energy of the core charge distribution:                -75.73106814560732
+  Core Hamiltonian energy:                                     -5.25805833334720
+  Hartree energy:                                              21.72075643346531
+  Exchange-correlation energy:                                 -3.51552590034206
+  Hartree-Fock Exchange energy:                                -1.79465903651928
+
+  GAPW| Exc from hard and soft atomic rho1:                    -4.06300965139152
+  GAPW| local Eh = 1 center integrals:                         -7.76409152584759
+
+  Total energy:                                               -76.40565599496877
+
+  outer SCF iter =    1 RMS gradient =   0.23E-07 energy =        -76.4056559950
+  outer SCF loop converged in   1 iterations or    8 steps
+
+
+ !-----------------------------------------------------------------------------!
+                     Mulliken Population Analysis
+
+ #  Atom  Element  Kind  Atomic population                           Net charge
+       1     O        1          8.801979                             -0.801979
+       2     H        2          0.599010                              0.400990
+       3     H        2          0.599010                              0.400990
+ # Total charge                             10.000000                 -0.000000
+
+ !-----------------------------------------------------------------------------!
+
+ !-----------------------------------------------------------------------------!
+                           Hirshfeld Charges
+
+  #Atom  Element  Kind  Ref Charge     Population                    Net charge
+      1       O      1       8.000          9.167                        -1.167
+      2       H      2       1.000          0.415                         0.585
+      3       H      2       1.000          0.415                         0.585
+
+  Total Charge                                                            0.002
+ !-----------------------------------------------------------------------------!
+
+  HFX_MEM_INFO| Number of cart. primitive DERIV's calculated:           10246056
+  HFX_MEM_INFO| Number of sph. DERIV's calculated:                        658368
+  HFX_MEM_INFO| Number of sph. DERIV's stored in-core:                         0
+  HFX_MEM_INFO| Number of sph. DERIV's calculated on the fly:             658368
+  HFX_MEM_INFO| Total memory consumption DERIV's RAM [MiB]:                    0
+  HFX_MEM_INFO| Whereof max-vals [MiB]:                                        1
+  HFX_MEM_INFO| Total compression factor DERIV's RAM:                       0.00
+
+
+ ENERGY| Total FORCE_EVAL ( QS ) energy [a.u.]:              -76.405655994974822
+
+ Number of electrons:                                                         10
+ Number of occupied orbitals:                                                  5
+ Number of molecular orbitals:                                                 5
+
+ Number of orbital functions:                                                 18
+ Number of independent orbital functions:                                     18
+
+ Parameters for the always stable predictor-corrector (ASPC) method:
+
+  ASPC order: 3
+
+  B(1) =   3.000000
+  B(2) =  -3.428571
+  B(3) =   1.928571
+  B(4) =  -0.571429
+  B(5) =   0.071429
+
+ Extrapolation method: ASPC
+
+
+ SCF WAVEFUNCTION OPTIMIZATION
+
+  ----------------------------------- OT ---------------------------------------
+  Minimizer      : DIIS                : direct inversion
+                                         in the iterative subspace
+                                         using   7 DIIS vectors
+                                         safer DIIS on
+  Preconditioner : FULL_ALL            : diagonalization, state selective
+  Precond_solver : DEFAULT
+  stepsize       :    0.15000000                  energy_gap     :    0.08000000
+  eps_taylor     :   0.10000E-15                  max_taylor     :             4
+  ----------------------------------- OT ---------------------------------------
+
+  Step     Update method      Time    Convergence         Total energy    Change
+  ------------------------------------------------------------------------------
+
+  HFX_MEM_INFO| Est. max. program size before HFX [MiB]:                    1105
+  HFX_MEM_INFO| Number of cart. primitive ERI's calculated:               862022
+  HFX_MEM_INFO| Number of sph. ERI's calculated:                           54864
+  HFX_MEM_INFO| Number of sph. ERI's stored in-core:                       54864
+  HFX_MEM_INFO| Number of sph. ERI's stored on disk:                           0
+  HFX_MEM_INFO| Number of sph. ERI's calculated on the fly:                    0
+  HFX_MEM_INFO| Total memory consumption ERI's RAM [MiB]:                      1
+  HFX_MEM_INFO| Whereof max-vals [MiB]:                                        1
+  HFX_MEM_INFO| Total compression factor ERI's RAM:                         2.06
+  HFX_MEM_INFO| Total memory consumption ERI's disk [MiB]:                     0
+  HFX_MEM_INFO| Total compression factor ERI's disk:                        0.00
+  HFX_MEM_INFO| Size of density/Fock matrix [MiB]:                             0
+  HFX_MEM_INFO| Size of buffers [MiB]:                                         0
+  HFX_MEM_INFO| Est. max. program size after HFX  [MiB]:                    1105
+
+     1 OT DIIS     0.15E+00    2.1     0.00282522       -76.4055703009 -7.64E+01
+     2 OT DIIS     0.15E+00    2.4     0.00125255       -76.4056388513 -6.86E-05
+     3 OT DIIS     0.15E+00    2.4     0.00054456       -76.4056530980 -1.42E-05
+     4 OT DIIS     0.15E+00    2.4     0.00003902       -76.4056559760 -2.88E-06
+     5 OT DIIS     0.15E+00    2.4     0.00000795       -76.4056559941 -1.82E-08
+     6 OT DIIS     0.15E+00    2.4     0.00000071       -76.4056559949 -7.86E-10
+     7 OT DIIS     0.15E+00    2.4     0.00000017       -76.4056559949 -7.46E-12
+     8 OT DIIS     0.15E+00    2.4     0.00000001       -76.4056559949 -2.84E-13
+
+  *** SCF run converged in     8 steps ***
+
+
+  Electronic density on regular grids:         -8.0119804727        1.9880195273
+  Core density on regular grids:               10.0000000000        0.0000000000
+  Hard and soft densities (Lebedev):          -14.7499800732      -12.7619611825
+  Total Rho_soft + Rho1_hard - Rho1_soft       -9.9999993634
+  Total charge density (r-space):               0.0000006366
+  Total Rho_soft + Rho0_soft (g-space):        -0.0000010190
+
+  Overlap energy of the core charge distribution:               0.00000016462090
+  Self energy of the core charge distribution:                -75.73106814560732
+  Core Hamiltonian energy:                                     -5.25805839539840
+  Hartree energy:                                              21.72075649954933
+  Exchange-correlation energy:                                 -3.51552589495437
+  Hartree-Fock Exchange energy:                                -1.79465903428102
+
+  GAPW| Exc from hard and soft atomic rho1:                    -4.06300964820215
+  GAPW| local Eh = 1 center integrals:                         -7.76409154067030
+
+  Total energy:                                               -76.40565599494336
+
+  outer SCF iter =    1 RMS gradient =   0.13E-07 energy =        -76.4056559949
+  outer SCF loop converged in   1 iterations or    8 steps
+
+
+ !-----------------------------------------------------------------------------!
+                     Mulliken Population Analysis
+
+ #  Atom  Element  Kind  Atomic population                           Net charge
+       1     O        1          8.801979                             -0.801979
+       2     H        2          0.599010                              0.400990
+       3     H        2          0.599010                              0.400990
+ # Total charge                             10.000000                 -0.000000
+
+ !-----------------------------------------------------------------------------!
+
+ !-----------------------------------------------------------------------------!
+                           Hirshfeld Charges
+
+  #Atom  Element  Kind  Ref Charge     Population                    Net charge
+      1       O      1       8.000          9.167                        -1.167
+      2       H      2       1.000          0.415                         0.585
+      3       H      2       1.000          0.415                         0.585
+
+  Total Charge                                                            0.002
+ !-----------------------------------------------------------------------------!
+
+  HFX_MEM_INFO| Number of cart. primitive DERIV's calculated:           10246056
+  HFX_MEM_INFO| Number of sph. DERIV's calculated:                        658368
+  HFX_MEM_INFO| Number of sph. DERIV's stored in-core:                         0
+  HFX_MEM_INFO| Number of sph. DERIV's calculated on the fly:             658368
+  HFX_MEM_INFO| Total memory consumption DERIV's RAM [MiB]:                    0
+  HFX_MEM_INFO| Whereof max-vals [MiB]:                                        1
+  HFX_MEM_INFO| Total compression factor DERIV's RAM:                       0.00
+
+
+ ENERGY| Total FORCE_EVAL ( QS ) energy [a.u.]:              -76.405655994948518
+
+ -------------------------------------------------------------------------------
+ ----                             MULTIGRID INFO                            ----
+ -------------------------------------------------------------------------------
+ count for grid        1:           1560          cutoff [a.u.]          200.00
+ count for grid        2:            342          cutoff [a.u.]           66.67
+ count for grid        3:             86          cutoff [a.u.]           22.22
+ count for grid        4:              4          cutoff [a.u.]            7.41
+ total gridlevel count  :           1992
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                         MESSAGE PASSING PERFORMANCE                         -
+ -                                                                             -
+ -------------------------------------------------------------------------------
+
+ ROUTINE             CALLS      AVE VOLUME [Bytes]
+ MP_Group                5
+ MP_Bcast              833                   1675.
+ MP_Allreduce         1945                    436.
+ MP_Sync               387
+ -------------------------------------------------------------------------------
+
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                           R E F E R E N C E S                               -
+ -                                                                             -
+ -------------------------------------------------------------------------------
+ 
+ CP2K version 9.0 (Development Version), the CP2K developers group (2021).
+ CP2K is freely available from https://www.cp2k.org/ .
+
+ Kuehne,Thomas D.; Iannuzzi,Marcella; Del Ben,Mauro;
+ Rybkin,Vladimir V.; Seewald,Patrick; Stein,Frederick; Laino,Teodoro;
+ Khaliullin,Rustam Z.; Schuett,Ole; Schiffmann,Florian; Golze,Dorothea;
+ Wilhelm,Jan; Chulkov,Sergey; Bani-Hashemian,Mohammad Hossein;
+ Weber,Valery; Borstnik,Urban; Taillefumier,Mathieu;
+ Jakobovits,Alice Shoshana; Lazzaro,Alfio; Pabst,Hans; Mueller,Tiziano;
+ Schade,Robert; Guidon,Manuel; Andermatt,Samuel; Holmberg,Nico;
+ Schenter,Gregory K.; Hehn,Anna; Bussy,Augustin; Belleflamme,Fabian;
+ Tabacchi,Gloria; Gloess,Andreas; Lass,Michael; Bethune,Iain;
+ Mundy,Christopher J.; Plessl,Christian; Watkins,Matt;
+ VandeVondele,Joost; Krack,Matthias; Hutter,Juerg. 
+ The Journal of Chemical Physics, 152 (19), (2020). 
+ CP2K: An electronic structure and molecular dynamics software package -
+ Quickstep: Efficient and accurate electronic structure calculations.
+ https://doi.org/10.1063/5.0007045
+
+ Lehtola, S; Steigemann, C; Oliveira, MJT; Marques, MAL. 
+ SoftwareX, 7, 1-5 (2018). 
+ Recent developments in libxc - A comprehensive library of functionals
+ for density functional theory.
+ https://doi.org/10.1016/j.softx.2017.11.002
+
+ Schuett, Ole; Messmer, Peter; Hutter, Juerg; VandeVondele, Joost. 
+ Electronic Structure Calculations on Graphics Processing Units, John
+ Wiley & Sons, Ltd, 173-190 (2016). 
+ GPU-Accelerated Sparse Matrix-Matrix Multiplication for
+ Linear Scaling Density Functional Theory.
+ https://doi.org/10.1002/9781118670712.ch8
+
+ Heinecke, A; Henry, G; Hutchinson, M; Pabst, H. 
+ Proceedings of Intl. Supercomputing Conference, 981-991 (2016). 
+ LIBXSMM: Accelerating Small Matrix Multiplications
+ by Runtime Code Generation.
+ https://doi.org/10.1109/SC.2016.83
+
+ Borstnik, U; VandeVondele, J; Weber, V; Hutter, J. 
+ PARALLEL COMPUTING, 40 (5-6), 47-58 (2014). 
+ Sparse matrix multiplication: The distributed block-compressed sparse
+ row library.
+ https://doi.org/10.1016/j.parco.2014.03.012
+
+ Hutter, J; Iannuzzi, M; Schiffmann, F; VandeVondele, J. 
+ WIREs Comput Mol Sci., 4 (1), 15-25 (2014). 
+ CP2K: atomistic simulations of condensed matter systems.
+ https://doi.org/10.1002/wcms.1159
+
+ Marek, A; Blum, V; Johanni, R; Havu, V; Lang, B; Auckenthaler, T;
+ Heinecke, A; Bungartz, H; Lederer, H. 
+ Journal of Physics: Condensed Matter, 26 (21), (2014). 
+ The ELPA library: scalable parallel eigenvalue solutions for
+ electronic structure
+ theory and computational science.
+ https://doi.org/10.1088/0953-8984/26/21/213201
+
+ Marques, MAL; Oliveira, MJT; Burnus, T. 
+ COMPUTER PHYSICS COMMUNICATIONS, 183 (10), 2272-2281 (2012). 
+ LIBXC: A library of exchange and correlation functionals for density
+ functional theory.
+ https://doi.org/10.1016/j.cpc.2012.05.007
+
+ Guidon, M; Hutter, J; VandeVondele, J. 
+ JOURNAL OF CHEMICAL THEORY AND COMPUTATION, 5 (11), 3010-3021 (2009). 
+ Robust Periodic Hartree-Fock Exchange for Large-Scale Simulations Using
+ Gaussian Basis Sets.
+ https://doi.org/10.1021/ct900494g
+
+ Guidon, M; Schiffmann, F; Hutter, J; VandeVondele, J. 
+ JOURNAL OF CHEMICAL PHYSICS, 128 (21), 214104 (2008). 
+ Ab initio molecular dynamics using hybrid density functionals.
+ https://doi.org/10.1063/1.2931945
+
+ Kuhne, TD; Krack, M; Mohamed, FR; Parrinello, M. 
+ PHYSICAL REVIEW LETTERS, 98 (6), 066401 (2007). 
+ Efficient and accurate Car-Parrinello-like approach to
+ Born-Oppenheimer molecular dynamics.
+ https://doi.org/10.1103/PhysRevLett.98.066401
+
+ Frigo, M; Johnson, SG. 
+ PROCEEDINGS OF THE IEEE, 93 (2), 216-231 (2005). 
+ The design and implementation of FFTW3.
+ https://doi.org/10.1109/JPROC.2004.840301
+
+ Kolafa, J. 
+ JOURNAL OF COMPUTATIONAL CHEMISTRY, 25 (3), 335-342 (2004). 
+ Time-reversible always stable predictor-corrector method for molecular dynamics of polarizable molecules.
+ https://doi.org/10.1002/jcc.10385
+
+ VandeVondele, J; Hutter, J. 
+ JOURNAL OF CHEMICAL PHYSICS, 118 (10), 4365-4369 (2003). 
+ An efficient orbital transformation method for electronic structure
+ calculations.
+ https://doi.org/10.1063/1.1543154
+
+ Lippert, G; Hutter, J; Parrinello, M. 
+ THEORETICAL CHEMISTRY ACCOUNTS, 103 (2), 124-140 (1999). 
+ The Gaussian and augmented-plane-wave density functional method for ab
+ initio molecular dynamics simulations.
+ https://doi.org/10.1007/s002140050523
+
+ Krack, M; Parrinello, M. 
+ PHYSICAL CHEMISTRY CHEMICAL PHYSICS, 2 (10), 2105-2112 (2000). 
+ All-electron ab-initio molecular dynamics.
+ https://doi.org/10.1039/b001167n
+
+ Martyna, GJ; Tuckerman, ME. 
+ JOURNAL OF CHEMICAL PHYSICS, 110 (6), 2810-2821 (1999). 
+ A reciprocal space based method for treating long range interactions in
+ ab initio and force-field-based calculations in clusters.
+ https://doi.org/10.1063/1.477923
+
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                                T I M I N G                                  -
+ -                                                                             -
+ -------------------------------------------------------------------------------
+ SUBROUTINE                       CALLS  ASD         SELF TIME        TOTAL TIME
+                                MAXIMUM       AVERAGE  MAXIMUM  AVERAGE  MAXIMUM
+ CP2K                                 1  1.0    0.008    0.008  171.086  171.086
+ rep_env_calc_e_f                     7  2.0    0.002    0.002  167.666  167.666
+ qs_forces                            7  3.0    0.000    0.000  162.958  162.958
+ qs_energies                          7  4.0    0.000    0.000  146.260  146.260
+ rebuild_ks_matrix                   67  7.7    0.000    0.000  145.189  145.189
+ qs_ks_build_kohn_sham_matrix        67  8.7    0.010    0.010  145.189  145.189
+ scf_env_do_scf                       7  5.0    0.001    0.001  144.199  144.199
+ qs_ks_update_qs_env                 68  7.0    0.000    0.000  128.503  128.503
+ scf_env_do_scf_inner_loop           60  6.0    0.004    0.004  125.687  125.687
+ qs_vxc_create                       67  9.7    0.001    0.001   96.116   96.116
+ xc_vxc_pw_create                    67 10.7    2.505    2.505   96.115   96.115
+ pw_transfer                       1408 11.5    0.084    0.084   83.117   83.117
+ fft_wrap_pw1pw2                   1207 12.5    0.013    0.013   81.865   81.865
+ fft_wrap_pw1pw2_200                804 13.6    4.143    4.143   78.800   78.800
+ xc_rho_set_and_dset_create          67 11.7    0.425    0.425   62.984   62.984
+ xc_functional_eval                 469 11.8    0.002    0.002   48.251   48.251
+ libxc_lda_eval                     469 12.8   48.246   48.246   48.248   48.248
+ fft3d_s                           1208 14.5   42.797   42.797   42.834   42.834
+ pw_gather_s                        604 14.1   18.865   18.865   18.865   18.865
+ init_scf_loop                        8  6.0    0.000    0.000   18.510   18.510
+ qs_rho_update_rho                   67  7.1    0.001    0.001   16.942   16.942
+ calculate_rho_elec                  67  8.1    0.639    0.639   16.932   16.932
+ qs_ks_update_qs_env_forces           7  4.0    0.000    0.000   16.688   16.688
+ pw_scatter_s                       603 15.0   15.824   15.824   15.824   15.824
+ density_rs2pw                       67  9.1    0.003    0.003   15.623   15.623
+ calculate_vxc_atom                  67  9.7    1.281    1.281   15.186   15.186
+ prepare_gapw_den                    67  9.7    0.001    0.001    9.570    9.570
+ sum_up_and_integrate                67  9.7    0.226    0.226    9.379    9.379
+ integrate_v_rspace                  67 10.7    0.002    0.002    9.153    9.153
+ potential_pw2rs                     67 11.7    0.023    0.023    8.957    8.957
+ put_rho0_on_grid                    67 10.7    0.650    0.650    8.681    8.681
+ vxc_of_r_new                       402 10.7    0.160    0.160    8.455    8.455
+ gaVxcgb_GC                         201 10.7    5.448    5.448    5.448    5.448
+ pw_derive                          402 12.2    4.872    4.872    4.872    4.872
+ mp_sum_dm                          699  7.0    4.789    4.789    4.789    4.789
+ rep_env_sync                        10  2.7    0.000    0.000    4.788    4.788
+ pw_poisson_solve                    67  9.7    1.127    1.127    4.221    4.221
+ pw_copy                            871 12.1    3.851    3.851    3.851    3.851
+ -------------------------------------------------------------------------------
+
+ The number of warnings for this run is : 0
+ 
+ -------------------------------------------------------------------------------
+  **** **** ******  **  PROGRAM ENDED AT                 2021-07-14 15:24:52.325
+ ***** ** ***  *** **   PROGRAM RAN ON                                    tcpc23
+ **    ****   ******    PROGRAM RAN BY                                    hsatoh
+ ***** **    ** ** **   PROGRAM PROCESS ID                                  4808
+  **** **  *******  **  PROGRAM STOPPED IN   /data/hsatoh/grrm17_cp2k/H2O-min-re

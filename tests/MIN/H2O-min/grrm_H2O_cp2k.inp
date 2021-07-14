@@ -1,0 +1,89 @@
+&FORCE_EVAL
+  METHOD Quickstep
+  &PRINT
+   &GRRM
+     filename =grrm_H2O_OUT4GEN.rrm
+    &END GRRM
+  &END PRINT
+  &DFT
+    BASIS_SET_FILE_NAME EMSL_BASIS_SETS
+    POTENTIAL_FILE_NAME POTENTIAL
+    CHARGE 0
+    MULTIPLICITY 1
+    &MGRID
+      CUTOFF 400
+      REL_CUTOFF 70
+    &END MGRID
+    &QS
+      METHOD GAPW
+    &END QS
+    &POISSON
+      PERIODIC NONE
+      PSOLVER MT
+    &END
+    &SCF
+      EPS_SCF 1.0E-7
+      SCF_GUESS ATOMIC 
+      MAX_SCF 10
+      &OT ON
+         PRECONDITIONER FULL_ALL
+         MINIMIZER DIIS
+      &END
+      &OUTER_SCF
+         EPS_SCF 1.0E-7
+         MAX_SCF 10
+      &END
+    &END SCF
+#These are the coefficients used for B3LYP using VWN5, this is recommended but doesn't match the default Gaussian definition
+    &XC
+      &XC_FUNCTIONAL
+        &LIBXC
+          FUNCTIONAL XC_HYB_GGA_XC_B3LYP
+        &END LIBXC
+      &END XC_FUNCTIONAL
+      &HF
+        &SCREENING
+          EPS_SCHWARZ 1.0E-12 
+          EPS_SCHWARZ_FORCES 1.0E-10
+          SCREEN_P_FORCES T 
+        &END
+        &MEMORY
+          MAX_MEMORY  10000 
+        &END
+        FRACTION 0.20
+      &END
+    &END XC
+  &END DFT
+  &SUBSYS
+    &CELL
+      ABC 10.0 10.0 10.0
+      PERIODIC NONE
+    &END CELL
+    &COORD
+ O         -0.000000000000          0.000000001837          0.134009384023
+ H         -0.000000000000          0.763122518468         -0.463901191443
+ H         -0.000000000000         -0.763122520305         -0.463901192579
+    &END COORD
+    &KIND H 
+      BASIS_SET 6-31Gx
+      POTENTIAL ALL
+      RADIAL_GRID 500
+    &END KIND
+    &KIND O
+      BASIS_SET 6-31Gx
+      POTENTIAL ALL
+      RADIAL_GRID 500
+    &END KIND
+  &END SUBSYS
+&END FORCE_EVAL
+&GLOBAL
+  PROJECT grrm_H2O_cp2k
+  RUN_TYPE ENERGY_FORCE
+  PRINT_LEVEL MEDIUM 
+&END GLOBAL
+&MOTION
+   &GEO_OPT
+      MAX_ITER   100
+      OPTIMIZER  BFGS
+   &END GEO_OPT
+&END MOTION

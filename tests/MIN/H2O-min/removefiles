@@ -1,0 +1,1 @@
+rm *.log *.rrm *.hess *.inp *.out *RESTART* *standard* *VIBRATIONS*

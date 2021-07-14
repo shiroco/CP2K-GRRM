@@ -1,0 +1,56 @@
+&FORCE_EVAL
+  METHOD Quickstep
+  &PRINT
+   &GRRM
+    filename =xxx
+   &END GRRM
+  &END PRINT
+  &DFT
+    CHARGE 0
+    MULTIPLICITY 1
+    &QS
+      METHOD xTB 
+      &xTB
+        CHECK_ATOMIC_CHARGES OFF
+      &END xTB
+    &END QS
+    &SCF
+      EPS_SCF 1.0E-7
+      SCF_GUESS ATOMIC 
+      MAX_SCF 10
+      &OT ON
+         PRECONDITIONER FULL_ALL
+         MINIMIZER DIIS
+      &END
+      &OUTER_SCF
+         EPS_SCF 1.0E-7
+         MAX_SCF 10
+      &END
+    &END SCF
+  &END DFT
+  &SUBSYS
+    &CELL
+      ABC 50.0 50.0 50.0
+      PERIODIC NONE
+    &END CELL
+    &COORD
+ C          2.326472097942          0.002598386798         -0.040129850655
+ C          1.880383660965          1.369293763016         -0.040388676796
+ C          0.716209649300          2.212959648093         -0.040678758071
+ C         -0.721529823305          2.211207902973         -0.040701476007
+ C         -1.883655662486          1.364728487199         -0.040444953280
+ C         -2.326447958118         -0.003037362195         -0.040198433078
+    &END COORD
+  &END SUBSYS
+&END FORCE_EVAL
+&GLOBAL
+  PROJECT H2O_grrm 
+  RUN_TYPE GEO_OPT 
+  PRINT_LEVEL MEDIUM 
+&END GLOBAL
+&MOTION
+   &GEO_OPT
+      MAX_ITER   100
+      OPTIMIZER  BFGS
+   &END GEO_OPT
+&END MOTION

@@ -1,0 +1,109 @@
+*************************************************************************
+ Global Reaction Route Mapping (GRRM) Program,                           
+     Produced by Satoshi Maeda, Yu Harabuchi, Yosuke Sumiya,             
+                 Makito Takagi, Kimichi Suzuki, Kanami Sugiyama,         
+                 Yuriko Ono, Miho Hatanaka, Yuto Osada,                  
+                 Tetsuya Taketsugu, Keiji Morokuma, Koichi Ohno,         
+                                  (Version 17-A01, Release: DEC 27, 2017)
+*************************************************************************
+ MIN: Minimum-point optimization                                  (by SM)
+         using the interface with a NON-SUPPORTED program         (by SM)
+*************************************************************************
+
+OPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTO
+
+# ITR. 0
+O 	   0.000000000000	   0.000000000000	   0.113399000000
+H 	   0.000000000000	   0.759328000000	  -0.453596000000
+H 	   0.000000000000	  -0.759328000000	  -0.453596000000
+           Item        	           Value 	        Threshold
+           ENERGY      	 -76.405655994911
+           Spin(**2)   	   0.000000000000
+           LAMDA       	  -0.001877576650
+           TRUST RADII 	   0.100000000000
+           STEP RADII  	   0.037860044030
+  Maximum  Force       	   0.080448566166	   0.000060000000
+  RMS      Force       	   0.046667821354	   0.000040000000
+  Maximum  Displacement	   0.019990827753	   0.000300000000
+  RMS      Displacement	   0.008250196160	   0.000200000000
+NORMAL MODE EIGENVALUE : N_MODE = 3
+  0.164940329   0.998557145   1.380421151
+
+# ITR. 1
+O 	  -0.000000000000	   0.000000008233	   0.133389827753
+H 	  -0.000000000000	   0.761891376333	  -0.463591410803
+H 	   0.000000000000	  -0.761891384567	  -0.463591416950
+           Item        	           Value 	        Threshold
+           ENERGY      	 -76.406631694362
+           Spin(**2)   	   0.000000000000
+           LAMDA       	  -0.000007927022
+           TRUST RADII 	   0.113580132090
+           STEP RADII  	   0.002622785298
+  Maximum  Force       	   0.005088105399	   0.000060000000
+  RMS      Force       	   0.002953466322	   0.000040000000
+  Maximum  Displacement	   0.001132511213	   0.000300000000
+  RMS      Displacement	   0.000577745301	   0.000200000000
+NORMAL MODE EIGENVALUE : N_MODE = 3
+  0.161260721   0.971211973   1.380438406
+
+# ITR. 2
+O 	  -0.000000000000	   0.000000003319	   0.133930786490
+H 	   0.000000000000	   0.763023887546	  -0.463861892096
+H 	  -0.000000000000	  -0.763023890866	  -0.463861894393
+           Item        	           Value 	        Threshold
+           ENERGY      	 -76.406636033192
+           Spin(**2)   	   0.000000000000
+           LAMDA       	  -0.000000045532
+           TRUST RADII 	   0.010000000000
+           STEP RADII  	   0.000271904909
+  Maximum  Force       	   0.000529962948	   0.000060000000
+  RMS      Force       	   0.000306734083	   0.000040000000
+  Maximum  Displacement	   0.000098630922	   0.000300000000
+  RMS      Displacement	   0.000056492068	   0.000200000000
+NORMAL MODE EIGENVALUE : N_MODE = 3
+  0.176167047   0.941250549   1.364643587
+
+# ITR. 3
+O 	  -0.000000000000	   0.000000001837	   0.134009384023
+H 	  -0.000000000000	   0.763122518468	  -0.463901191443
+H 	  -0.000000000000	  -0.763122520305	  -0.463901192579
+           Item        	           Value 	        Threshold
+           ENERGY      	 -76.406636112341
+           Spin(**2)   	   0.000000000000
+           LAMDA       	  -0.000000074157
+           TRUST RADII 	   0.010000000000
+           STEP RADII  	   0.000017033068
+  Maximum  Force       	   0.000032483057	   0.000060000000
+  RMS      Force       	   0.000018795857	   0.000040000000
+  Maximum  Displacement	   0.000005905678	   0.000554135031
+  RMS      Displacement	   0.000003505079	   0.000369423354
+NORMAL MODE EIGENVALUE : N_MODE = 3
+  0.174358013   0.916799528   1.364883514
+
+=========================================================================
+Optimized structure, SYMMETRY = C2v 
+O 	  -0.000000000000	   0.000000001837	   0.134009384023
+H 	  -0.000000000000	   0.763122518468	  -0.463901191443
+H 	  -0.000000000000	  -0.763122520305	  -0.463901192579
+ENERGY    =  -76.406636112341
+Spin(**2) =    0.000000000000
+GRADIENT VECTOR
+   0.000000001888
+  -0.000000000578
+  -0.000021684570
+   0.000000003168
+  -0.000007339752
+  -0.000004849369
+  -0.000000005259
+   0.000007340126
+  -0.000004841325
+
+Stationary point was found
+OPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTO
+
+Normal termination of the GRRM Program Ver. 17-A01 at Hokkaido Univ......
+NUMBER OF SINGLE POINT CALCULATIONS : 0
+NUMBER OF FORCE CALCULATIONS        : 3
+NUMBER OF HESSIAN CALCULATIONS      : 1
+NUMBER OF MICROITERATIONS           : 0
+TOTAL ELAPSED TIME                  : 235.0 SEC.
