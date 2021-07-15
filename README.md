@@ -25,7 +25,7 @@ How to use
 
 See the GRRM manual for more details to use external codes.
 
-(2) After all the "OPTIONS" specifications, add an empty line and write the following information for CP2K run:
+(3) After all the "OPTIONS" specifications, add an empty line and write the following information for CP2K run:
 
 	&cp2k_template : template for CP2K input. e.g., cp2k.tmp
 	&cp2k_exe : CP2K execution type. e.g., cp2k.popt
