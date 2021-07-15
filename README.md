@@ -1,5 +1,5 @@
 ------------------------
-Tools to use CP2K from GRRM.
+Tools to use CP2K from GRRM
 ------------------------
 
 
@@ -38,6 +38,17 @@ See the GRRM manual for more details to use external codes.
 2. Prepare template for CP2K input
 
 A template for CP2K input files is necessary. The file name (e.g., cp2k.tmp) has to be specified in the GRRM input file (see above).
+
+Write this setting in the &FORCE_EVAL section:
+
+	  &PRINT
+	   &GRRM
+	    filename =xxx
+	   &END GRRM
+	  &END PRINT
+
+See https://manual.cp2k.org/trunk/CP2K_INPUT/FORCE_EVAL/PRINT/GRRM.html and the sample template for more details.
+
 Geometry data of the template is replaced with that from GRRM-output.
 
 
